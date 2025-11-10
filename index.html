@@ -73,6 +73,13 @@
         display: flex;
          }
         }
+
+        .responsive-img {
+        width: 100%;      /* Image will scale to the width of its container */
+        height: auto;     /* Keeps the aspect ratio */
+        display: block;   /* Removes small gaps under images */
+        }
+
     </style>
 </head>
 <body>
@@ -132,19 +139,19 @@
 <section id="gallery">
 <h2>Image Gallery</h2>
 <div class="gallery">
-<img src="webby.jpg" />
+<img src="webby.jpg" class="responsive-img" />
 </div>
 <div class="gallery">
-<img src="web.jpg" />
+<img src="web.jpg" class="responsive-img" />
 </div>
 <div class="gallery">
-<img src="greenforest.jpg" />
+<img src="greenforest.jpg" class="responsive-img" />
 </div>
 <div class="gallery">
-<img src="iam.jpg" />
+<img src="iam.jpg" class="responsive-img"/>
 </div>
 <div class="gallery">
-<img src="worship.jpg" />
+<img src="worship.jpg" class="responsive-img"/>
 </div>
 </section>
 
