@@ -8,46 +8,57 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Mark Timothy Guanzon</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom px-4">
+    <a class="navbar-brand fw-bold text-white" href="index.html">Mark Timothy Guanzon</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-center">
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-3"><button class="btn btn-outline-light" id="toggleDark">Dark Mode</button></li>
-        </ul>
-      </div>
+          </ul>
+        <button id="darkModeBtn" class="btn btn-outline-light ms-3">Dark Mode</button>
     </div>
-  </nav>
+</nav>
 
-  <main class="container py-5">
-    <div class="pt-5">
-      <h1 class="mb-3">About Me</h1>
-      <p>I’m Mark Timothy Guanzon, a developer focused on building real-world projects that highlight my growth and technical abilities. I enjoy turning ideas into clean, efficient, and user-friendly solutions.</p>
-      <p>Skills: HTML, CSS, JavaScript, Bootstrap, Java, PHP, MySQL — working to strengthen full-stack development capabilities and prepare for professional software/IT roles.</p>
+  <!-- About Section -->
+<section class="about container py-5">
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+       <h1 class="card-title">About Me</h1>
+      <p class="card-text">I’m Mark Timothy Guanzon, a developer focused on building real-world projects that highlight my growth and technical abilities. I enjoy turning ideas into clean, efficient, and user-friendly solutions.</p>
+      <p class="card-text">Skills: HTML, CSS, JavaScript, Bootstrap, Java, PHP, MySQL — working to strengthen full-stack development capabilities and prepare for professional software/IT roles.</p>
+        </div>
+        </div>
+        </div>
 
-      <h3 class="mt-4">Interests & Goals</h3>
+      <div class="col-md-4">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+      <h1 class="card-title">Interests & Goals</h1>
       <ul>
         <li>Build production-ready projects to showcase skills</li>
         <li>Improve data structures & algorithms (LeetCode)</li>
         <li>Aim for software/IT roles with potential sponsorship by 2026</li>
       </ul>
     </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container text-center py-3">
-      <p class="mb-0">© 2025 Mark Timothy Guanzon. All Rights Reserved.</p>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
+
+  <footer class="footer-custom text-center text-white py-4">
+    <p class="mb-1 navbar-brand fw-bold text-white">© 2025 Mark Timothy Guanzon. All Rights Reserved.</p>
+    <small>Built with passion, modern code, and continuous learning.</small>
+    </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js" defer></script>
+  <script src="main.js"></script>
 </body>
 </html>

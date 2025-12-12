@@ -1,97 +1,196 @@
-:root{
-  --accent-1: #2b6cb0;
-  --accent-2: #4f46e5;
-  --bg: #f8fafc;
-  --text: #1f2937;
+/* ===== GLOBAL FULL GRADIENT WRAPPER ===== */
+.global-gradient {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
 }
 
-/* Basic reset */
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding-top:70px; /* navbar space */
+
+/* === style.css (All pages combined) === */
+
+/* Styles specific for index.html */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-/* Navbar gradient */
-.navbar{
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-  box-shadow: 0 2px 8px rgba(16,24,40,0.05);
+
+/* === about.css === */
+
+.about-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Hero */
-.hero{
-  min-height:60vh;
-  background: linear-gradient(180deg, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.85) 100%), url('') center/cover no-repeat;
-  color: white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 0;
+.about-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-/* Section titles */
-.section-title{
-  font-size:1.5rem;
-  margin-bottom:1rem;
-  color:var(--text);
+
+/* === projects.css === */
+
+.project-card {
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Cards */
-.project-card{
-  background: white;
-  border-radius:10px;
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
-/* CTA section */
-.cta-section{
-  background: linear-gradient(90deg, #2b3b4f, #283e51);
-  color: white;
-  padding:60px 0;
+
+/* === resume.css === */
+
+.resume-wrapper {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* Footer */
-.footer{
-  background: linear-gradient(90deg, #0f1724, #111827);
-  color: #cbd5e1;
+.download-btn {
+    padding: 10px 20px;
+    background: #2575fc;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
-/* Dark mode overrides */
-body.dark-mode{
-  background: #0b1220;
-  color: #e6eef8;
-}
-.navbar.dark-mode{
-  background: linear-gradient(90deg,#0b1220,#0f1724) !important;
-}
-.card.dark-mode, .project-card.dark-mode{
-  background: #0f1724;
-  color: #e6eef8;
-  border: 1px solid rgba(255,255,255,0.03);
-}
-.section-title.dark-mode{
-  color: #e6eef8;
-}
-.footer.dark-mode{
-  background: #071025;
-  color: #94a3b8;
-}
-.cta-section.dark-mode{
-  background: linear-gradient(90deg,#0b1724,#082036);
-  color: #e6eef8;
+
+/* === contact.css === */
+
+.contact-section {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
 }
 
-/* Small utilities */
-.container{max-width:1100px}
-a { text-decoration: none; }
-.btn-outline-light{border-color:rgba(255,255,255,0.85); color: #fff}
+.contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-/* Responsive tweaks */
-@media (max-width: 767px){
-  .hero{padding:60px 20px}
+.contact-card input,
+.contact-card textarea {
+    border-radius: 8px;
+}
+
+
+/* BODY PADDING TO AVOID OVERLAP WITH FIXED NAVBAR */
+body {
+    padding-top: 70px; /* height of navbar */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Optional: adjust header, footer, hero gradients in dark mode */
+header.dark-mode, footer.dark-mode, .hero.dark-mode {
+    filter: brightness(0.8); /* slightly darker for dark mode */
+}
+
+/* NAVBAR / HEADER GRADIENT */
+.navbar-custom {
+     background: linear-gradient(90deg, #7b2ff7, #1e3fff); /* Purple to Blue */
+    color: white;
+}
+
+/* HERO SECTION (same gradient as navbar) */
+.hero {
+    background: linear-gradient(90deg, #7b2ff7, #1e3fff); /* same gradient as navbar */
+    color: white;
+    padding: calc(80px + 20px) 20px 80px; /* 80px = navbar height + 20px extra spacing */
+    margin: 0;
+}
+
+/* NAVBAR LINKS */
+.navbar .nav-link {
+    color: white;
+    font-weight: 500;
+}
+.navbar .nav-link:hover {
+    text-decoration: none;
+}
+
+/* FOOTER GRADIENT */
+.footer-custom {
+    background: linear-gradient(90deg, #7b2ff7, #1e3fff); /* matches navbar/header */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* your navbar height */
+    z-index: 1000;
+    background: linear-gradient(90deg, #7b2ff7, #1e3fff); /* your purple-blue gradient */
+}
+
+/* Make the collapsed menu (mobile menu) have same background */
+.navbar-collapse {
+    background: linear-gradient(90deg, #7b2ff7, #1e3fff);
+}
+
+/* Optional: add smooth transition */
+.navbar, .navbar-collapse {
+    transition: background 0.3s;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px; /* bigger font size */
+    color: white; /* default link color */
+    position: relative; /* needed for hover animation */
+    transition: all 0.3s ease; /* smooth transition */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700; /* optional hover color */
+    transform: scale(1.1); /* text grows slightly */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;    /* vertical centering */
+    height: 200px;          /* container height */
+}
+
+/* BUTTONS */
+.btn-light {
+    color: #182848;
+    font-weight: 600;
+}
+
+/* OPTIONAL: fade-in sections */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
